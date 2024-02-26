@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .hero {
+            color: white;
+            text-shadow: 3px 3px gray;
+            font-family: cursive;
+            font-size: x-large;
+            font-weight: 900;
+            background-image: url('herobg.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            text-align: left;
+            padding: 50px;
+            min-height: 4cm;
+            box-shadow: 0 0 200px rgba(0, 0, 0, .20) inset;
+        }
+
+        .button-container {
+            display: inline-block;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            display: grid;
+        }
+        button {
+            border: 5px outset;
+            border-radius: 200px;
+            padding: 18px;
+            width: 30%;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+            font-size: 100%;
+            margin: auto;
+            opacity: 0.9;
+        }
+        .b1 {
+            border-color: darkcyan;
+            background: linear-gradient(lightblue, cyan);
+        }
+        .b1:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+        .b2 {
+            border-color: darkcyan;
+            background: linear-gradient(cyan, lightblue);
+        }
+        .b2:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+        .b3 {
+            border-color: darkcyan;
+            background: linear-gradient(lightblue, cyan);
+        }
+        .b3:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+        .b4 {
+            border-color: darkcyan;
+            background: linear-gradient(cyan, lightblue);
+        }
+        .b4:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+        .b5 {
+            border-color: darkcyan;
+            background: linear-gradient(lightblue, cyan);
+        }
+        .b5:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+        .b6 {
+            border-color: darkcyan;
+            background: linear-gradient(cyan, skyblue);
+        }
+        .b6:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: cyan;
+            font-size: 65px;
+            text-shadow: 0 0 30px darkcyan;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            width: 100%;
+            font-weight: 900;
+        }
+        h2 {
+            font-weight: 900;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        h3 {
+            color: cyan;
+            text-shadow: 4px 4px darkcyan;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 62px;
+            font-weight: bolder;
+            text-align: center;
+        }
+        h4 {
+            color: lightcyan;
+            text-shadow: 4px 4px darkcyan;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+            font-size: 40px;
+            text-align: center;
+            width: 100%;
+            font-weight: 800;
+        }
+        h5 {
+            color: white;
+            text-align: center;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-style: italic;
+            color: aliceblue;
+            text-shadow: 0 0 15px white;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        b {
+            color: cyan;
+            font-weight: bolder;
+        }
+
+        .about {
+            font-size: x-large;
+            background-image: url('aboutbg.jpg');
+            background-attachment: unset;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 2em 4em;
+            min-height: 5cm;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .works {
+            font-size: x-large;
+            background-image: url('workbg.jpg');
+            background-attachment: unset;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 2em 4em;
+            min-height: 5cm;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contact {
+            font-size: x-large;
+            background-image: url('contactbg.jpg');
+            background-attachment: unset;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 2em 4em;
+            min-height: 5cm;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .box {
+            background-color: aliceblue;
+            box-shadow: 0 0 20px 0 #999;
+            top: 50%;
+            left: 50%;
+            width: 500%;
+            transform: translate(-50%,-50%);
+            position: absolute;
+        }
+        form {
+            margin: 50px;
+            text-align: center;
+        }
+        .input-field {
+            border: 1px solid darkcyan;
+            border-radius: 15px;
+            width: 50%;
+            height: 50px;
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            outline: none;
+        }
+        .textarea-field {
+            width: 50%;
+            height: 100px;
+            padding-top: 10px;
+        }
+        .btn {
+            font-size: 20px;
+            background-color: aquamarine;
+            padding: 15px;
+            margin-top: 20px;
+            color: darkslategrey;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            width: 49%;
+            height: 50px;
+        }
+        .btn:hover {
+            font-weight: bold;
+            transition: transform 0.5s ease;
+            transform: scale(1.1);
+            color: white;
+            background-color: darkcyan;
+        }
+        .fbbtn {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px 20px;
+            font-size: xx-large;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .fbbtn:hover {
+            background-color: darkblue;
+            transition: transform 0.7s ease;
+            transform: scale(1.1);
+            font-weight: bold;
+            color: lightblue;
+            box-shadow: 0 0 20px skyblue;
+        }
+        .igbtn {
+            background-color: #cd486b;
+            color: white;
+            padding: 10px 20px;
+            font-size: xx-large;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .igbtn:hover {
+            background-color: red;
+            transition: transform 0.7s ease;
+            transform: scale(1.1);
+            font-weight: bold;
+            color: lightpink;
+            box-shadow: 0 0 20px pink;
+        }
+        .gmbtn {
+            background-color: #2E8B57;
+            color: white;
+            padding: 10px 20px;
+            font-size: xx-large;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .gmbtn:hover {
+            background-color: green;
+            transition: transform 0.7s ease;
+            transform: scale(1.1);
+            font-weight: bold;
+            color: lightgreen;
+            box-shadow: 0 0 20px yellowgreen;
+        }
+        .tgbtn {
+            background-color: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            font-size: xx-large;
+            text-decoration: none;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .tgbtn:hover {
+            background-color: cornflowerblue;
+            transition: transform 0.7s ease;
+            transform: scale(1.1);
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .topnav {
+            overflow: hidden;
+            width: 98%;
+            position: fixed;
+            top: 0;
+            left: 8px;
+            right: 0px;
+            padding: 5px 5px;
+            background-image: url(contactbg.jpg);
+            box-shadow: 0 0 20px gray;
+        }
+        .topnav a {
+            float: right;
+            display: grid;
+            color: white;
+            text-align: left;
+            padding: 20px 20px;
+            text-decoration: none;
+            font-size: large;
+            margin-right: 60px;
+        }
+        .topnav a:hover {
+            text-shadow: 0 0 30px aliceblue;
+            color: white;
+            font-weight: 900;
+            transition: transform 0.20s ease;
+            transform: scale(1.1);
+            font-size: xx-large;
+            font-family: fantasy;
+        }
+        .topnav .icon {
+            display: none;
+        }
+        .logo {
+            width: 70px;
+            padding: 10px 10px;
+        }
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {float: right; display: block;}
+        }
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive a.icon {position: absolute; right: 0; top: 0;}
+            .topnav.responsive a { float: none; display: block; text-align: left;}
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="topnav" id="myTopnav">
+            <img src="logo.png" class="logo">
+            <a href="#d">CONTACT ME</a>
+            <a href="#c">WORKS</a>
+            <a href="#b">ABOUT ME</a>
+            <a href="#a">HERO</a>
+            <a href="javascript:void(0);" class="icon" onclick="nav()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <br>
+        <h2 id="a">HI GUYS, IT'S ME . . .</h2>
+        <h1>MARK EDRIAN <br> GONZALGO</h1>
+        <h2>AND THIS IS MY</h2>
+        <h1>ONLINE PORTFOLIO</h1>
+    </div>
+    <div class="about">
+        <h3 id="b">ABOUT ME</h3>
+        <img src="profile.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 30%; box-shadow:0 0 50px gray">
+        <p>Hi, I'm <b>MARK EDRIAN GONZALGO</b> and I am an BSIT student in 
+            <br>Dalubhasaan ng Lungsod ng Lucena.
+            <br>I'm 21 years old and currently living in Brgy. Ibabang Iyam Lucena
+            <br>City. First of all I choose IT because I want to learn more about  
+            <br>technology, I want to explore and discover what really an Information 
+            <br>Technology have. So far there are lot of learnings I already gained since 
+            <br>I was in first year until now. Just like animation, programming, coding, 
+            <br>creating databases and websites, etc,. So this ONLINE PORTFOLIO just  
+            <br>serves as my folder of learnings. In this website you will see all  
+            <br>the learnings I gained and different programs I made from my subject  
+            <br><b>WS101</b> and some of this includes the HTML, CSS and JAVASCRIPT. 
+            <br>Hope you like it!.
+            <br>
+            <br>If you want to know more <b>ABOUT ME</b>, just click this button for 
+            <br>more informations.
+            <br>
+        </P>
+        <div class="button-container">
+            <button id="myb6" class="b6">OPEN RESUME</button>
+        </div>
+    </div>
+    <div class="works">
+        <h3 id="c">WORKS</h3>
+        <h4>RESPONSIVE LANDING PAGE</h4>
+        <img src="responsivepage.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%; box-shadow: 0 0 15px #aaa">
+        <br>
+        <div class="button-container">
+            <button id="myb1" class="b1">TRY IT!</button>
+        </div>
+        <br>
+        <br>
+        <h4>WORKING CALCULATOR</h4>
+        <img src="calculator.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%; box-shadow: 0 0 15px #aaa">
+        <br>
+        <div class="button-container">
+            <button id="myb2" class="b2">TRY IT!</button>
+        </div>
+        <br>
+        <br>
+        <h4>TO-DO LIST APPLICATION</h4>
+        <img src="todolistapp.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%; box-shadow: 0 0 15px #aaa">
+        <br>
+        <div class="button-container">
+            <button id="myb3" class="b3">TRY IT!</button>
+        </div>
+        <br>
+        <br>
+        <h4>ADD EVENT LISTENER</h4>
+        <img src="eventlistener.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%; box-shadow: 0 0 15px #aaa">
+        <br>
+        <div class="button-container">
+            <button id="myb4" class="b4">TRY IT!</button>
+        </div>
+        <br>
+        <br>
+        <h4>COLOR CHANGER</h4>
+        <img src="colorchanger.jpg" style="display: block; margin-left: auto; margin-right: auto; width: 80%; box-shadow: 0 0 15px #aaa">
+        <br>
+        <div class="button-container">
+            <button id="myb5" class="b5">TRY IT!</button>
+        </div>
+    </div>
+    <div class="contact">
+        <h3 id="d">CONTACT ME</h3>
+        <div class="box"></div>
+        <form action="https://formspree.io/f/xleqbykz" method="post">
+            <input type="text" name="first" class="input-field" placeholder="First Name" autocomplete="off" required>
+            <input type="text" name="last" class="input-field" placeholder="Last Name" autocomplete="off" required>
+            <input type="email" name="email" class="input-field" placeholder="Email Address" autocomplete="off" required>
+            <textarea type="text" name="message" class="input-field textarea-field" placeholder="Enter Message" autocomplete="off" required></textarea>
+            <button type="submit" class="btn">SEND MESSAGE</button>
+        </form>
+        <a href=mailto:"megonz172@gmail.com" class="gmbtn">GM</a>
+        <a href="https://www.facebook.com/profile.php?id=100007302076286" class="fbbtn">FB</a>
+        <a href="https://instagram.com/megonzzz?igshid=MW5rc3BsM2Y2MjFmMA==" class="igbtn">IG</a>
+        <a href="https://t.me/kramnairde" class="tgbtn">TG</a>
+        <br>
+        <br>
+        <br>
+        <img src="logo.png" style="display: block; width: 8%; padding: 10px; border-radius: 10%; margin-left: auto; margin-right:auto;">
+        <h5>Copyright @ 2024<br>All Rights Reserved<br>Developed By: <b>Mark Edrian A. Gonzalgo</b></h5>
+    </div>
+        <script>
+            document.getElementById("myb1").addEventListener("click", function1);
+            document.getElementById("myb2").addEventListener("click", function2);
+            document.getElementById("myb3").addEventListener("click", function3);
+            document.getElementById("myb4").addEventListener("click", function4);
+            document.getElementById("myb5").addEventListener("click", function5);
+            document.getElementById("myb6").addEventListener("click", function6);
+
+        function function1() {
+            window.location.href = 'https://markedriangonzalgo.github.io/responsive-landing-page/';
+        }
+        function function2() {
+            window.location.href = 'https://markedriangonzalgo.github.io/working-calculator/';
+        }
+        function function3() {
+            window.location.href = 'https://markedriangonzalgo.github.io/todo-list-app/';
+        }
+        function function4() {
+            window.location.href = 'https://markedriangonzalgo.github.io/HandsOn1-addEventListener-WS101/';
+        }
+        function function5() {
+            window.location.href = 'https://markedriangonzalgo.github.io/HandsOn2-colorChanger-WS101/';
+        }
+        function function6() {
+            window.location.href = 'https://markedriangonzalgo.github.io/online-resume/';
+        }
+
+        function nav() {
+            var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}
+        }
+        </script>
+</body>
+</html>
